@@ -13,8 +13,6 @@ sed -i 's/#PubkeyAuthentication/PubkeyAuthentication/' /etc/ssh/sshd_config
 apt-get -y update
 # net tools
 apt-get -y install net-tools
-# update and upgrade
-#apt-get -y update && apt-get -y upgrade
 # sudoers
 touch /etc/sudoers.d/90-sudo
 echo "vinicius ALL=(ALL) NOPASSWD:ALL" > /etc/sudoers.d/90-sudo
@@ -24,4 +22,5 @@ chmod +x /home/vinicius/start.sh
 cp rc.local /etc/
 chown root /etc/rc.local
 chmod 755 /etc/rc.local
-echo apt-get -y update && apt-get -y upgrade
+sleep 15
+apt-get -y update && apt-get -y upgrade
