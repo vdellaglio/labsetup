@@ -18,13 +18,10 @@ apt-get -y install net-tools
 # sudoers
 touch /etc/sudoers.d/90-sudo
 echo "vinicius ALL=(ALL) NOPASSWD:ALL" > /etc/sudoers.d/90-sudo
-# custom vi
-cp .vimrc /home/vinicius/
-cp .vimrc /root/
 # rc.local
 cp start.sh /home/vinicius/
 chmod +x /home/vinicius/start.sh
 cp rc.local /etc/
 chown root /etc/rc.local
 chmod 755 /etc/rc.local
-# test new file
+echo apt-get -y update && apt-get -y upgrade
