@@ -14,7 +14,7 @@ apt-get -y update
 # net tools
 apt-get -y install net-tools
 # update and upgrade
-apt-get -y update && apt-get -y upgrade
+#apt-get -y update && apt-get -y upgrade
 # sudoers
 touch /etc/sudoers.d/90-sudo
 echo "vinicius ALL=(ALL) NOPASSWD:ALL" > /etc/sudoers.d/90-sudo
