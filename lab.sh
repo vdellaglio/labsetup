@@ -9,6 +9,8 @@ cp .vimrc /root/
 # ssh config
 sed -i 's/#PermitRootLogin/PermitRootLogin/' /etc/ssh/sshd_config
 sed -i 's/#PubkeyAuthentication/PubkeyAuthentication/' /etc/ssh/sshd_config
+systemctl reload sshd
+systemctl restart sshd
 # update
 apt-get -y update
 # net tools
